@@ -1,3 +1,10 @@
 .env
 __pycache__/
 .DS_Store
+*.pyc
+.venv/
+venv/
+*.docx
+reports/*.md
+!reports/.gitkeep
+.streamlit/secrets.toml
