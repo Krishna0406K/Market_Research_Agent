@@ -1,4 +1,4 @@
-# Market Agent 🚀
+# Market Research Agent 🚀
 
 An AI-powered market research and business analysis system built with [crewAI](https://crewai.com). This multi-agent system conducts comprehensive market research, competitive analysis, customer insights, and product strategy development for any AI product idea.
 
