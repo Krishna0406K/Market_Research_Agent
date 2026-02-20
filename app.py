@@ -256,7 +256,7 @@ def main():
     # Header
     st.markdown("""
         <div class="main-header">
-            <h1>🚀 Market Agent AI</h1>
+            <h1>🚀 Market Research Agent AI</h1>
             <p>AI-Powered Market Research & Business Analysis</p>
         </div>
     """, unsafe_allow_html=True)
@@ -266,7 +266,7 @@ def main():
         st.image("https://img.icons8.com/fluency/96/000000/artificial-intelligence.png", width=80)
         st.title("About")
         st.markdown("""
-        **Market Agent AI** uses five specialized AI agents to conduct comprehensive market research:
+        **Market Research Agent AI** uses five specialized AI agents to conduct comprehensive market research:
         
         🔍 **Market Research Specialist**  
         📊 **Competitive Intelligence Analyst**  
