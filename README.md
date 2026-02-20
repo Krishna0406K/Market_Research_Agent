@@ -1,4 +1,4 @@
-# Market Agent 🚀
+# Market Research Agent 🚀
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![crewAI](https://img.shields.io/badge/crewAI-1.9.3-purple.svg)](https://crewai.com)
