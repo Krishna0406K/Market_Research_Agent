@@ -25,7 +25,6 @@ disable_signal_handlers()
 # Set environment variable to disable crewAI telemetry
 os.environ['CREWAI_TELEMETRY_OPT_OUT'] = 'true'
 
-from market_agent.streamlit_runner import run_crew_safe
 
 st.set_page_config(
     page_title="Market Agent AI",
