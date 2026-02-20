@@ -27,7 +27,7 @@ An AI-powered market research and business analysis system built with [crewAI](h
 
 - **[Quick Start Guide](QUICKSTART.md)** - Get up and running in 5 minutes
 - **[Demo Walkthrough](DEMO.md)** - See a complete example analysis
-- **[Feature Overview](FEATURES.md)** - Detailed feature descriptions
+- **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Streamlit Cloud, Heroku, AWS, etc.
 - **[Troubleshooting](TROUBLESHOOTING.md)** - Common issues and solutions
 
 ## Overview
@@ -69,6 +69,8 @@ Market Agent orchestrates five specialized AI agents that work together to analy
 ## Installation
 
 **Quick Start:** See [QUICKSTART.md](QUICKSTART.md) for a 5-minute setup guide.
+
+**Deployment Issues?** The signal handler error is fixed! See [TROUBLESHOOTING_DEPLOYMENT.md](TROUBLESHOOTING_DEPLOYMENT.md)
 
 1. Clone the repository:
 ```bash
@@ -208,6 +210,9 @@ Add custom tools in `src/market_agent/tools/`.
 streamlit run app.py
 # or on Windows
 run_app.bat
+
+# Test deployment setup
+python test_deployment.py
 
 # Run via command line
 crewai run

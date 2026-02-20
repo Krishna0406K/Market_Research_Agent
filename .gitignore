@@ -8,3 +8,4 @@ venv/
 reports/*.md
 !reports/.gitkeep
 .streamlit/secrets.toml
+*.log

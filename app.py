@@ -7,7 +7,25 @@ from io import BytesIO
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from market_agent.crew import MarketAgent
+import signal
+import sys
+
+# Disable signal handlers for Streamlit compatibility
+def disable_signal_handlers():
+    """Disable signal handlers that cause issues in Streamlit"""
+    try:
+        signal.signal(signal.SIGINT, signal.SIG_DFL)
+        signal.signal(signal.SIGTERM, signal.SIG_DFL)
+    except:
+        pass
+
+# Call this before importing crewai
+disable_signal_handlers()
+
+# Set environment variable to disable crewAI telemetry
+os.environ['CREWAI_TELEMETRY_OPT_OUT'] = 'true'
+
+from market_agent.streamlit_runner import run_crew_safe
 
 st.set_page_config(
     page_title="Market Agent AI",
@@ -455,9 +473,9 @@ def main():
                     progress_bar.progress((i + 1) * 20)
                     
                     if i == 0:
-                        # Start the actual crew execution
+                        # Start the actual crew execution using safe runner
                         with st.spinner("AI agents are collaborating..."):
-                            result = MarketAgent().crew().kickoff(inputs=inputs)
+                            result = run_crew_safe(product_idea)
                 
                 progress_bar.progress(100)
                 status_text.markdown("**✅ Analysis complete!**")
